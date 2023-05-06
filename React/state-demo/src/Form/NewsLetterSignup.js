@@ -1,24 +1,36 @@
 import { useState } from "react";
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
-
-  const [agreed, setAgreed] = useState(false);
+  const [user, setUser] = useState({
+    userEmail: "",
+    agreed: false,
+  });
 
   function updateEmailHandler(event) {
     // could add email validation here
 
-    setEmail(event.target.value);
+    setUser((prev) => {
+      return {
+        ...prev,
+        userEmail: event.target.value,
+      };
+    });
   }
 
   function updateAgreementHandler(event) {
-    setAgreed(event.target.checked); // checked is a default JS boolean property
+    setUser((prev) => {
+      return {
+        ...prev,
+        agreed: event.target.value,
+      };
+    });
   }
 
   function signupHandler(event) {
     event.preventDefault(); // prevent browser default of sending a Http request
 
-    const userData = { userEmail: email, userAgrees: agreed };
-    console.log(userData);
+    // const userData = { userEmail: email, userAgrees: agreed };
+    // console.log(userData);
+    console.log(user);
 
     // doWhateverYouWant(userData);
   }
