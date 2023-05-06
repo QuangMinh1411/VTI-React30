@@ -1,0 +1,7 @@
+My Goals for this course
+* Teach React in a higly understandable way//title
+  I want to ensure that you the most out of this book and you learn all about React//content
+* Allow you to practice what you learned
+  Reading and learning is fun and helpful
+* Motivate you to continue learning
+  As a developer, learning never ends, I want to ensure that you enjoys learning
