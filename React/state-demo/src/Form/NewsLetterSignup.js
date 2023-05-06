@@ -16,11 +16,11 @@ export default function NewsletterSignup() {
     });
   }
 
-  function updateAgreementHandler(event) {
+  function updateAgreementHandler() {
     setUser((prev) => {
       return {
         ...prev,
-        agreed: event.target.value,
+        agreed: !prev.agreed,
       };
     });
   }
