@@ -17,10 +17,10 @@ export default function NewsletterSignup() {
   }
 
   function updateAgreementHandler() {
-    setUser((prev) => {
+    setUser((p) => {
       return {
-        ...prev,
-        agreed: !prev.agreed,
+        ...p,
+        agreed: !p.agreed,
       };
     });
   }
